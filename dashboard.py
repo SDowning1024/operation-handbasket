@@ -3,8 +3,8 @@ from supabase import create_client
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 
-SUPABASE_URL = st.secrets["https://fesljajdsbxodzrlqnno.supabase.co"]
-SUPABASE_KEY = st.secrets["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlc2xqYWpkc2J4b2R6cmxxbm5vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwMTkxNjgsImV4cCI6MjA4ODU5NTE2OH0.iR8ilbhRwhPTVi0fo6KgGlFPVrupS8b-1RHE6nf01c0"]
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
@@ -150,4 +150,3 @@ if not df.empty:
 
 else:
     st.info("No bets found yet. The scanner may still be running.")
-
