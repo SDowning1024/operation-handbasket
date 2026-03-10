@@ -150,3 +150,4 @@ if not df.empty:
 
 else:
     st.info("No bets found yet. The scanner may still be running.")
+
